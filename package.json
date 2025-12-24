@@ -9,9 +9,11 @@
   "categories": [
     "Other"
   ],
-"activationEvents": [
+  "publisher": "myname",
+  "activationEvents": [
     "onStartupFinished"
   ],
+  "repository": "http://github.com/soda92/click-to-go",
   "main": "./dist/extension.js",
   "contributes": {
     "commands": [
