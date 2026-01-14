@@ -20,10 +20,10 @@ export function activate(context: vscode.ExtensionContext) {
 		const uri = vscode.Uri.file(filePath);
 		try {
 			const doc = await vscode.workspace.openTextDocument(uri);
-			const editor = await vscode.window.showTextDocument(doc);
 			const position = new vscode.Position(line - 1, 0);
-			editor.selection = new vscode.Selection(position, position);
-			editor.revealRange(new vscode.Range(position, position), vscode.TextEditorRevealType.InCenter);
+			const range = new vscode.Range(position, position);
+			const editor = await vscode.window.showTextDocument(doc, { selection: range });
+			editor.revealRange(range, vscode.TextEditorRevealType.InCenter);
 		} catch (error) {
 			vscode.window.showErrorMessage(`Could not open file: ${filePath}`);
 		}
