@@ -1,7 +1,7 @@
 {
   "name": "click-to-go",
-  "displayName": "click-to-go",
-  "description": "",
+  "displayName": "Custom go-to-def support",
+  "description": "auto identify file:line to support ctrl click to go to location",
   "version": "0.0.2",
   "engines": {
     "vscode": "^1.107.0"
@@ -9,7 +9,7 @@
   "categories": [
     "Other"
   ],
-  "publisher": "myname",
+  "publisher": "sodacris",
   "activationEvents": [
     "onStartupFinished"
   ],
